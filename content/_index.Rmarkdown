@@ -1,8 +1,0 @@
----
-author: Andrew G. Brown
-title: humus.rocks
----
-
-```{r rss-agg, message=FALSE, warning=FALSE, echo=FALSE, results='asis'}
-cat("#### humus.rocks blog")
-```
