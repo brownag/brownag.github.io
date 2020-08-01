@@ -6,10 +6,30 @@
     <description>Recent content in humus.rocks on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Transitioning to hugo &#43; R blogdown-driven blog</title>
+      <link>/post/2020/08/01/transitioning-to-hugo-r-blogdown-driven-blog/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020/08/01/transitioning-to-hugo-r-blogdown-driven-blog/</guid>
+      <description>The humus.rocks website has used Drupal 7 for the last 2.5 years. I have only tapped a fraction of the resources that are available to me in the Drupal platform &amp;ndash; using it essentially as a glorified RSS feed aggregator and &amp;ldquo;blog&amp;rdquo;.
+I would much rather write my blogs in markdown &amp;ndash; and then I can extend that to Rmarkdown for my more code-oriented topics or any case where I need to generate some content in a programmatic way.</description>
+    </item>
+    
+    <item>
+      <title>Estimations of Soil Depth with aqp</title>
+      <link>/post/2020/07/13/estimations-with-algorithms-for-quantitative-pedology/</link>
+      <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020/07/13/estimations-with-algorithms-for-quantitative-pedology/</guid>
+      <description>Estimation of soil depth in aqp R package Estimation functions for soils try to calculate unknown properties based on existing observations and known relationships. The term pedotransfer function was coined by Johan Bouma as “translating data we have into what we need.” Soil surveys, and especially the primary descriptions collected by field soil scientists, offer many opportunities for leveraging this type of information.
+In Algorithms for Quantitative Pedology aqp, the heuristics are defined in terms of R code.</description>
+    </item>
     
     <item>
       <title>A Quick Goodbye to Drupal</title>
@@ -129,7 +149,8 @@ By making tests that contact remote APIs skip if missing the nasis_local ODBC co
       <guid>/post/2018/12/25/loafercreek-aqp-profileapply-tutorial/</guid>
       <description>This is a tutorial (worked examples and exercises) demonstrating use of the profileApply() function from the R package aqp.
 http://ncss-tech.github.io/AQP/demos/profileApply/loafercreek.html
-It loads a dataset, called loafercreek from the R package soilDB. The analysis is supported by the package sharpshootR. These packages are in large part developed by Dylan Beaudette, but there now are many contributors within NCSS.
+It loads a dataset, called loafercreek from the R package soilDB.
+The analysis is supported by the package sharpshootR. These packages are in large part developed by Dylan Beaudette, but there now are many contributors within NCSS.
 Loafercreek the dataset is a collection of mostly moderately deep Ultic Haploxeralfs on metavolcanic rock from the CA630 soil survey area (parts of Calaveras and Tuolumne Counties.</description>
     </item>
     
