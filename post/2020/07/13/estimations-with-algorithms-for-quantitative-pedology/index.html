@@ -88,10 +88,16 @@ sp3$depth &lt;- profileApply(sp3, estimateSoilDepth)
 # 
 guess &lt;- guessHzDesgnName(sp3)
 guess</code></pre>
-<pre><code>## [1] &quot;&quot;</code></pre>
+<pre><code>## [1] &quot;name&quot;</code></pre>
 <pre class="r"><code># inspect
 horizons(sp3)[[guess]]</code></pre>
-<pre><code>## NULL</code></pre>
+<pre><code>##  [1] &quot;18 / 28&quot; &quot;19 / 14&quot; &quot;21 / 14&quot; &quot;22 / 13&quot; &quot;20 / 12&quot; &quot;7 / 8&quot;   &quot;7 / 5&quot;  
+##  [8] &quot;7 / 5&quot;   &quot;8 / 5&quot;   &quot;18 / 22&quot; &quot;20 / 13&quot; &quot;22 / 15&quot; &quot;25 / 14&quot; &quot;33 / 22&quot;
+## [15] &quot;56 / 42&quot; &quot;46 / 34&quot; &quot;15 / 16&quot; &quot;18 / 13&quot; &quot;21 / 14&quot; &quot;28 / 16&quot; &quot;46 / 40&quot;
+## [22] &quot;34 / 39&quot; &quot;14 / 20&quot; &quot;18 / 13&quot; &quot;25 / 14&quot; &quot;35 / 22&quot; &quot;39 / 26&quot; &quot;15 / 23&quot;
+## [29] &quot;22 / 12&quot; &quot;32 / 9&quot;  &quot;51 / 11&quot; &quot;7 / 7&quot;   &quot;6 / 4&quot;   &quot;10 / 5&quot;  &quot;11 / 6&quot; 
+## [36] &quot;11 / 6&quot;  &quot;11 / 6&quot;  &quot;16 / 7&quot;  &quot;9 / 7&quot;   &quot;9 / 8&quot;   &quot;8 / 6&quot;   &quot;10 / 5&quot; 
+## [43] &quot;12 / 15&quot; &quot;9 / 6&quot;   &quot;8 / 5&quot;   &quot;5 / 4&quot;</code></pre>
 <p>At the most basic level in an “estimate” you have one or more inputs producing a single, possibly complex, output. Estimates might be made at the horizon, site/profile or group level.</p>
 <p>Let’s look at all of the soil depths in the <code>sp3</code> collection as a histogram. We make an estimate for each profile, then we summarize those estimates for the “group” <code>sp3</code>.</p>
 <pre class="r"><code>hist(sp3$depth, 
