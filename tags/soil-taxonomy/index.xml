@@ -6,11 +6,7 @@
     <description>Recent content in soil taxonomy on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/soil-taxonomy/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/soil-taxonomy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Soil Taxonomy Graph Database with Neo4j and Cypher</title>
       <link>/post/2020/08/22/soil-taxonomy-graph-database/</link>

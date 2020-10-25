@@ -3,27 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/categories/aqp/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/dataframes/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/demonstrations/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/julia/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/r/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2020/10/25/riffing-on-the-soilprofilecollection/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/soilprofilecollection/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/vctrs/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2020/08/22/soil-taxonomy-graph-database/</loc>
     <lastmod>2020-08-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/cypher/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/demonstrations/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
     <lastmod>2020-08-22T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,28 +83,8 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/r/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/soil-taxonomy/</loc>
     <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-08-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/aqp/</loc>
-    <lastmod>2020-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -79,11 +104,6 @@
   
   <url>
     <loc>/categories/permute_profile/</loc>
-    <lastmod>2020-08-16T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/soilprofilecollection/</loc>
     <lastmod>2020-08-16T00:00:00+00:00</lastmod>
   </url>
   

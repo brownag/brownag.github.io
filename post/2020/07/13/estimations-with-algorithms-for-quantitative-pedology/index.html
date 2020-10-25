@@ -52,6 +52,7 @@
 
 <main>
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="estimation-of-soil-depth-in-aqp-r-package" class="section level3">
@@ -259,7 +260,7 @@ legend(&quot;top&quot;, c(&quot;k&quot;,&quot;kk&quot;,&quot;y&quot;,&quot;Cd&qu
 <p><img src="/post/2020-07-13-estimations-with-algorithms-for-quantitative-pedology_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
 <p>My preference from here would be to leave <code>estimateSoilDepth</code> alone, and generalize <code>depthOf</code> further for arbitrary logical expressions like several other functions in <code>aqp</code>, only for horizon data explicitly. Pattern matching behavior could be replicated using <code>grepl</code> based expressions.</p>
 <p>The old dataset I provide in the CSV files that was queried from NASIS before cementation and other criteria were included in the default <code>fetchNASIS</code> result. Dylan already did the diagnostic horizon based analysis in his post on the issue, so we will do something different.</p>
-<p>Here we inspect for evidence of pedogenesis – as you cannot meet the criteria for densic materials if you have significant pedogenesis. We can clearly see that all Cd horizons without <code>k</code> or <code>y</code> suffixes (<code>depth_to_Cd2</code>) are deeper than the corresponding estimate that looked for any horizon just containing <code>Cd</code>: the default part used in <code>estimateSoilDepth</code>. A custom pattern to filter to Cd without pedogenesis or Cr or R would be <code>&quot;Cd[^ky]|Cr|R&quot;</code></p>
+<p>Here we inspect for evidence of pedogenesis – as you cannot meet the criteria for densic materials if you have significant pedogenesis. We can clearly see that all Cd horizons without <code>k</code> or <code>y</code> suffixes (<code>depth_to_Cd2</code>) are deeper than the corresponding estimate that looked for any horizon just containing <code>Cd</code>: the default part used in <code>estimateSoilDepth</code>. A custom pattern to filter to Cd without pedogenesis or Cr or R would be <code>"Cd[^ky]|Cr|R"</code></p>
 <pre class="r"><code>plot(depth_to_Cd ~ depth_to_Cd2)</code></pre>
 <p><img src="/post/2020-07-13-estimations-with-algorithms-for-quantitative-pedology_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>

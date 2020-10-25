@@ -54,6 +54,7 @@
 
 <main>
 
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>For several years I have dreamt of ontologies and directed graph structures for representation of the logic in Soil Taxonomy. The express purpose of such work is that computer-aided taxonomy is “easier,” less prone to error, and enables <em>more powerful</em> reasoning about inherently abstract – but reasonably well-defined – concepts.</p>
@@ -103,7 +104,7 @@ The “directionality” (the key feature of Graph Databases) of relationships i
 <p>To do this somewhat more <em>Cypher</em>-y, we just specify known directions of the <code>CHILD_OF</code> relationship.</p>
 <pre><code>MATCH (taxn:Taxon { title: &#39;Typic Humixerepts&#39; })-[:CHILD_OF]-&gt;(prnt)&lt;-[:CHILD_OF]-(sibs)
 RETURN [prnt, sibs]</code></pre>
-<p>This is most explicitly written with both relationships to parent specified (i.e. <code>-&gt;(prnt)&lt;-</code>). Since the example taxa (“Typic Humixerepts”) only have a single relationship (<code>[:CHILD_OF]-&gt;(Humixerepts)</code>) it does not matter, but the same could not be said for a higher-level taxa that have children and a parent. Or if our graph included taxa below subgroup.</p>
+<p>This is most explicitly written with both relationships to parent specified (i.e. <code>-&gt;(prnt)&lt;-</code>). Since the example taxa (“Typic Humixerepts”) only have a single relationship (<code>[:CHILD_OF]-&gt;(Humixerepts)</code>) it does not matter, but the same could not be said for a higher-level taxa that have children and a parent. Or if our graph included taxa below subgroup.</p>
 <p>A neat feature of <em>Cypher</em> is that you can concatenate results with the “Pythonic” (or <em>Haskell</em>-ic) syntax <code>[x, y]</code>. I use <code>[prnt, sibs]</code> to return both the parent (<code>prnt</code>) plus nodes that are the same taxonomic level “subgroup” (<code>sibs</code>) as the input (<code>taxn</code>).</p>
 </div>
 </div>
@@ -144,10 +145,10 @@ service neo4j status</code></pre>
 <div id="references-source-further-reading" class="section level2">
 <h2>References, Source &amp; Further Reading</h2>
 <ul>
-<li><strong>Cypher refcard</strong>: <a href="https://neo4j.com/docs/cypher-refcard/current/" class="uri">https://neo4j.com/docs/cypher-refcard/current/</a></li>
+<li><p><strong>Cypher refcard</strong>: <a href="https://neo4j.com/docs/cypher-refcard/current/" class="uri">https://neo4j.com/docs/cypher-refcard/current/</a></p></li>
 <li><p><strong>Cypher manual</strong>: <a href="https://neo4j.com/docs/cypher-manual/current/introduction/" class="uri">https://neo4j.com/docs/cypher-manual/current/introduction/</a></p></li>
 <li><p><strong>Graph Databases – free eBook from O’Reilly</strong>: <a href="https://graphdatabases.com/" class="uri">https://graphdatabases.com/</a></p></li>
-<li><strong>brownag/ncss-standards</strong>: <a href="https://github.com/brownag/ncss-standards" class="uri">https://github.com/brownag/ncss-standards</a></li>
+<li><p><strong>brownag/ncss-standards</strong>: <a href="https://github.com/brownag/ncss-standards" class="uri">https://github.com/brownag/ncss-standards</a></p></li>
 <li><p><strong>ncss-tech/SoilTaxonomy</strong>: <a href="https://github.com/ncss-tech/SoilTaxonomy" class="uri">https://github.com/ncss-tech/SoilTaxonomy</a></p></li>
 <li><p><strong>Keys to Soil Taxonomy - NRCS Soils</strong>: <a href="https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/class/?cid=nrcs142p2_053580" class="uri">https://www.nrcs.usda.gov/wps/portal/nrcs/detail/soils/survey/class/?cid=nrcs142p2_053580</a></p></li>
 </ul>
