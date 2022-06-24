@@ -6,11 +6,7 @@
     <description>Recent content in hugo on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Transitioning to hugo &#43; R blogdown-driven blog</title>
       <link>/post/2020/08/01/transitioning-to-hugo-r-blogdown-driven-blog/</link>
@@ -27,8 +23,8 @@ I would much rather write my blogs in markdown &amp;ndash; and then I can extend
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/2020/07/05/first-post-using-hugo-blogdown/</guid>
-      <description>  This is a header This is some regular text.
-# this is some R code (with syntax highlighting) for (i in 1:10) { if (i %% 2 == 0) { print(sprintf(&amp;quot;this is a string %s&amp;quot;, i)) } } ## [1] &amp;quot;this is a string 2&amp;quot; ## [1] &amp;quot;this is a string 4&amp;quot; ## [1] &amp;quot;this is a string 6&amp;quot; ## [1] &amp;quot;this is a string 8&amp;quot; ## [1] &amp;quot;this is a string 10&amp;quot;  </description>
+      <description> This is a header This is some regular text.
+# this is some R code (with syntax highlighting) for (i in 1:10) { if (i %% 2 == 0) { print(sprintf(&amp;quot;this is a string %s&amp;quot;, i)) } } ## [1] &amp;quot;this is a string 2&amp;quot; ## [1] &amp;quot;this is a string 4&amp;quot; ## [1] &amp;quot;this is a string 6&amp;quot; ## [1] &amp;quot;this is a string 8&amp;quot; ## [1] &amp;quot;this is a string 10&amp;quot; </description>
     </item>
     
   </channel>

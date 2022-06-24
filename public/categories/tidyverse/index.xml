@@ -6,11 +6,7 @@
     <description>Recent content in tidyverse on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/tidyverse/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 16 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/tidyverse/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exploring the tidyverse, lakes, synthetic data, and tibble-SoilProfileCollections</title>
       <link>/post/2020/08/16/exploring-tibble-lakes-aqp-tidyverse/</link>

@@ -6,10 +6,16 @@
     <description>Recent content in demonstrations on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/demonstrations/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/demonstrations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Riffing on the SoilProfileCollection</title>
+      <link>/post/2020/10/25/riffing-on-the-soilprofilecollection/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020/10/25/riffing-on-the-soilprofilecollection/</guid>
+      <description>Recently I developed two different riffs on the motif of the aqp SoilProfileCollection… Soil profiles are essentially cross-sections for a point, line or area on the land surface where distinct “layers” are defined by a top and bottom depth measurement. There is generally a many:one relationship between layers observed within a soil profile and the site-level information that identifies or summarizes that profile.
+soilvctrs soilvctrs is an experimental R package to abstract geometric operations on stratified environmental data such as soil profile descriptions.</description>
+    </item>
     
     <item>
       <title>A Soil Taxonomy Graph Database with Neo4j and Cypher</title>
@@ -58,8 +64,8 @@ I would much rather write my blogs in markdown &amp;ndash; and then I can extend
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/2020/07/05/first-post-using-hugo-blogdown/</guid>
-      <description>  This is a header This is some regular text.
-# this is some R code (with syntax highlighting) for (i in 1:10) { if (i %% 2 == 0) { print(sprintf(&amp;quot;this is a string %s&amp;quot;, i)) } } ## [1] &amp;quot;this is a string 2&amp;quot; ## [1] &amp;quot;this is a string 4&amp;quot; ## [1] &amp;quot;this is a string 6&amp;quot; ## [1] &amp;quot;this is a string 8&amp;quot; ## [1] &amp;quot;this is a string 10&amp;quot;  </description>
+      <description> This is a header This is some regular text.
+# this is some R code (with syntax highlighting) for (i in 1:10) { if (i %% 2 == 0) { print(sprintf(&amp;quot;this is a string %s&amp;quot;, i)) } } ## [1] &amp;quot;this is a string 2&amp;quot; ## [1] &amp;quot;this is a string 4&amp;quot; ## [1] &amp;quot;this is a string 6&amp;quot; ## [1] &amp;quot;this is a string 8&amp;quot; ## [1] &amp;quot;this is a string 10&amp;quot; </description>
     </item>
     
     <item>
@@ -70,8 +76,9 @@ I would much rather write my blogs in markdown &amp;ndash; and then I can extend
       <guid>/post/2020/06/05/plot-henry-waterlevel-nearby-noaa-precip/</guid>
       <description>This is a demonstration of how to plot water level data from the Henry Mount Soil Climate database with precipitation data from a nearby NOAA weather station.
 The demo uses two functions I recently added to the soilDB package (available on GitHub)
- get_NOAA_stations_nearXY- find all stations near a specified latitude/longitude and bounding box (limit 1000)
- get_NOAA_GHCND - get GHCND data (daily summaries) by station IDs, datatypes and years</description>
+get_NOAA_stations_nearXY- find all stations near a specified latitude/longitude and bounding box (limit 1000)
+get_NOAA_GHCND - get GHCND data (daily summaries) by station IDs, datatypes and years
+Note that using the NOAA API requires an API token specified as argument to above two functions.</description>
     </item>
     
     <item>
@@ -80,7 +87,8 @@ The demo uses two functions I recently added to the soilDB package (available on
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/post/2020/01/27/aqp-1-19-release-and-demos/</guid>
-      <description>CRAN release: aqp (Algorithms for Quantitative Pedology) 1.19  Recent Changes CRAN release aqp 1.19 (2020-01-22)  new functions: hzDesgn(), get horizon designations from a SPC new functions: hzdesgnname()/hzdesgnname()&amp;lt;- and hztexclname()/hztexclname()&amp;lt;- get/set column containing horizon designations and texture classes better error/logic handling for glom()    Demonstrations aqp::glom() demo Here is a demonstration of checking cambic horizon texture criteria with glom() in SSURGO components from Yosemite National Park: - http://ncss-tech.</description>
+      <description>CRAN release: aqp (Algorithms for Quantitative Pedology) 1.19 Recent Changes CRAN release aqp 1.19 (2020-01-22) new functions: hzDesgn(), get horizon designations from a SPC new functions: hzdesgnname()/hzdesgnname()&amp;lt;- and hztexclname()/hztexclname()&amp;lt;- get/set column containing horizon designations and texture classes better error/logic handling for glom() Demonstrations aqp::glom() demo Here is a demonstration of checking cambic horizon texture criteria with glom() in SSURGO components from Yosemite National Park: - http://ncss-tech.github.io/AQP/demos/glom/glacierpoint.html
+aqp::estimatePSCS() demo Here is a demonstration of validating particle size control sections (populated in NASIS Taxonomic History Table) against calculated new algorithm estimatePSCS().</description>
     </item>
     
   </channel>

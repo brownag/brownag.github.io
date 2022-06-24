@@ -6,11 +6,7 @@
     <description>Recent content in Drupal on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/categories/drupal/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/drupal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Transitioning to hugo &#43; R blogdown-driven blog</title>
       <link>/post/2020/08/01/transitioning-to-hugo-r-blogdown-driven-blog/</link>

@@ -6,11 +6,7 @@
     <description>Recent content in groundwater on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/tags/groundwater/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 05 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/groundwater/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Plot Water Level &amp; NOAA Weather Data</title>
       <link>/post/2020/06/05/plot-henry-waterlevel-nearby-noaa-precip/</link>
@@ -19,8 +15,9 @@
       <guid>/post/2020/06/05/plot-henry-waterlevel-nearby-noaa-precip/</guid>
       <description>This is a demonstration of how to plot water level data from the Henry Mount Soil Climate database with precipitation data from a nearby NOAA weather station.
 The demo uses two functions I recently added to the soilDB package (available on GitHub)
- get_NOAA_stations_nearXY- find all stations near a specified latitude/longitude and bounding box (limit 1000)
- get_NOAA_GHCND - get GHCND data (daily summaries) by station IDs, datatypes and years</description>
+get_NOAA_stations_nearXY- find all stations near a specified latitude/longitude and bounding box (limit 1000)
+get_NOAA_GHCND - get GHCND data (daily summaries) by station IDs, datatypes and years
+Note that using the NOAA API requires an API token specified as argument to above two functions.</description>
     </item>
     
   </channel>
