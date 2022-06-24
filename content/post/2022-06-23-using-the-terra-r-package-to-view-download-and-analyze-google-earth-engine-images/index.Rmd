@@ -29,12 +29,8 @@ The key "issue" for me was authenticating with the Earth Engine API... the docum
 
 To create a `SpatRaster` from an existing source path/URL with `terra` we call `rast(<character>)` with a Google Earth Engine asset as our source. To denote the Earth Engine asset we prefix the path with "EEDAI:", which explicitly indicates the Google Earth Engine Data API driver be used.
 
-```{r, include=FALSE}
-Sys.setenv(GOOGLE_APPLICATION_CREDENTIALS="/home/andrew/Downloads/valid-gizmo-126108-7a2221edc836.json")
-```
-
 ```r
-terra::rast("EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG", opts ='--config ...')
+terra::rast("EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG")
 #> Error: [rast] cannot open file: EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG
 #> In addition: Warning message:
 #> Missing EEDA_BEARER, EEDA_BEARER_FILE or GOOGLE_APPLICATION_CREDENTIALS or EEDA_PRIVATE_KEY/EEDA_PRIVATE_KEY_FILE + EEDA_CLIENT_EMAIL config option (GDAL error 1) 
@@ -46,7 +42,15 @@ OK, so at least it recognizes Earth Engine as a possible data interface. How can
 
 `Sys.setenv()` allows relevant client connection parameters to be set. We need to provide the client email and private key to authenticate with the Earth Engine REST API. These data can be conveniently stored in plain-text in a JSON file. The private key provides access to the Earth Engine service on your behalf, so you should keep the contents of the file private.
 
-Passing GOOGLE_APPLICATION_CREDENTIALS config via `opts="--config GOOGLE APPLICATION_CREDENTIALS ..."` argument to `rast()` has same effect as `Sys.setenv(GOOGLE_APPLICATION_CREDENTIALS=...)`. 
+
+```{r, include=FALSE}
+Sys.setenv(GOOGLE_APPLICATION_CREDENTIALS="/home/andrew/Downloads/valid-gizmo-126108-7a2221edc836.json")
+```
+
+
+```{r, eval=FALSE}
+Sys.setenv(GOOGLE_APPLICATION_CREDENTIALS="/home/andrew/example-gizmo-999999-999999999999")
+```
 
 When the configuration options are specified the driver recognizes our credentials, but we get a 403 error "Permission Denied" with the message "Not signed up for Earth Engine or project is not registered. Visit https://earthengine.google.com/signup/"
 
@@ -79,7 +83,7 @@ These steps can also be done via the Google Cloud SDK / `gcloud` command-line to
 With your credentials set up, the above command should work, and you will get a SpatRaster with the Google Earth Engine asset as the source!
 
 ```r
-terra::rast("EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG", opts ='--config GOOGLE_APPLICATION_CREDENTIALS="/home/andrew/valid-gizmo-****-de2525a7302d.json")
+terra::rast("EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG")
 #> Warning: [rast] skipped sub-datasets (see 'desc(sds=TRUE)'):
 #> B2,B3,B4,B8,QA10, B5,B6,B7,B8A,B11,B12,QA20
 #> class       : SpatRaster 
@@ -149,4 +153,4 @@ unlink("test.tif")
 
 So, that's pretty cool. We can access public Earth Engine assets, view and analyze them, and save as a portable GeoTIFF format using only the `terra` R package. Some assembly is required in terms of setting up private keys for accessing the service on the Google Cloud side of the setup, but this could essentialy be "set and forget" in one's environment variables or _.Rprofile_
 
-If you found this article interesting, you might also enjoy this article on [Cloud Optimized GeoTIFF (COG)-backed Google Earth Engine Assets] (https://developers.google.com/earth-engine/Earth_Engine_asset_from_cloud_geotiff)
+If you found this article interesting, you might also enjoy this article on [Cloud Optimized GeoTIFF (COG)-backed Google Earth Engine Assets](https://developers.google.com/earth-engine/Earth_Engine_asset_from_cloud_geotiff)
