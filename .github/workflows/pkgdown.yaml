@@ -39,5 +39,6 @@ jobs:
           Rscript -e 'blogdown::build_site()'
           git config --local user.name "$GITHUB_ACTOR"
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git commit -a public/*
+          git add docs/*
+          git commit -m "Build site"
           git push
