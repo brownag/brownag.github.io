@@ -55,7 +55,7 @@ Sys.setenv(GOOGLE_APPLICATION_CREDENTIALS="/home/andrew/example-gizmo-999999-999
 When the configuration options are specified the driver recognizes our credentials, but we get a 403 error "Permission Denied" with the message "Not signed up for Earth Engine or project is not registered. Visit https://earthengine.google.com/signup/"
 
 ```r
-terra::rast("EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG", opts ='--config GOOGLE_APPLICATION_CREDENTIALS /home/andrew/valid-gizmo-****-****.json')
+terra::rast("EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG")
 #> Error: [rast] cannot open file: EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG
 #> In addition: Warning messages:
 #> 1: HTTP error code : 403 (GDAL error 1) 

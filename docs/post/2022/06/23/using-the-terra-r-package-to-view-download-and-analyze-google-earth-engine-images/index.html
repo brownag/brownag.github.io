@@ -72,7 +72,7 @@
 <p><code>Sys.setenv()</code> allows relevant client connection parameters to be set. We need to provide the client email and private key to authenticate with the Earth Engine REST API. These data can be conveniently stored in plain-text in a JSON file. The private key provides access to the Earth Engine service on your behalf, so you should keep the contents of the file private.</p>
 <pre class="r"><code>Sys.setenv(GOOGLE_APPLICATION_CREDENTIALS=&quot;/home/andrew/example-gizmo-999999-999999999999&quot;)</code></pre>
 <p>When the configuration options are specified the driver recognizes our credentials, but we get a 403 error “Permission Denied” with the message “Not signed up for Earth Engine or project is not registered. Visit <a href="https://earthengine.google.com/signup/" class="uri">https://earthengine.google.com/signup/</a>”</p>
-<pre class="r"><code>terra::rast(&quot;EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG&quot;, opts =&#39;--config GOOGLE_APPLICATION_CREDENTIALS /home/andrew/valid-gizmo-****-****.json&#39;)
+<pre class="r"><code>terra::rast(&quot;EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG&quot;)
 #&gt; Error: [rast] cannot open file: EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG
 #&gt; In addition: Warning messages:
 #&gt; 1: HTTP error code : 403 (GDAL error 1) 
