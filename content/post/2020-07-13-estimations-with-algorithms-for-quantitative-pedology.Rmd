@@ -35,6 +35,9 @@ data("sp3")
 # depths specifies the profile ID, top and bottom depths in horizon data
 depths(sp3) <- id ~ top + bottom
 
+# set horizon designation name
+hzdesgnname(sp3) <- "name"
+
 # inspect first 7 profiles from the set
 plotSPC(sp3[1:7,])
 
@@ -139,6 +142,9 @@ depths(spc) <- peiid ~ hzdept + hzdepb
 
 # join in site data
 site(spc) <- sit
+
+# set horizon designation name
+hzdesgnname(spc) <- "hzname"
 
 # compute soil depth and depth class for all pedons
 # using default regex pattern: 'Cr|R|Cd' from estimateSoilDepth

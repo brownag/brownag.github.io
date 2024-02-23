@@ -56,7 +56,6 @@
 
 <main>
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>In this brief tutorial, we will be using the <em>aqp</em> and <em>tidyverse</em> <strong>R</strong> packages for wrangling stratified environmental data from lake cores.</p>
@@ -107,7 +106,7 @@ pocmaj_raw &lt;- tribble(
 
 # inspect 
 head(pocmaj_raw)</code></pre>
-<pre><code>## # A tibble: 6 x 4
+<pre><code>## # A tibble: 6 × 4
 ##   sample_id    Ca    Ti     V
 ##   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
 ## 1 poc15-2 0  1036  1337    29
@@ -162,7 +161,7 @@ plot(pocmaj, color = &quot;V&quot;, name = &quot;hzID&quot;)</code></pre>
 </div>
 <div id="producing-site-level-summaries-from-layer-level-data-with-mutate_profile." class="section level2">
 <h2>Producing site-level summaries from layer-level data with <code>mutate_profile</code>.</h2>
-<p><code>mutate_profile</code> is a special variety of <code>mutate</code> defined by the <em>aqp</em> package. It contains built-in iteration to support multiple non-standard evaluation expressions that are evaluated in the context of each single profile in a collection.</p>
+<p><code>mutate_profile</code> is a special variety of <code>transform</code> defined by the <em>aqp</em> package. It contains built-in iteration to support multiple non-standard evaluation expressions that are evaluated in the context of each single profile in a collection.</p>
 <p>The result must either resolve to unit length for a profile (a site-level field) or equal in length to the number of layers for that profile (a layer-level field).</p>
 <p>Let’s define a function that we can use to summarize <em>SoilProfileCollection</em> objects over arbitrary depth intervals.</p>
 <pre class="r"><code>#&#39; Calculate site-level summary stats over interval [0, max.depth]
@@ -176,12 +175,11 @@ summarize_core &lt;- function(spc, max.depth = 600) {
   stopifnot(is.numeric(max.depth), length(max.depth) == 1, max.depth &gt; 0)
   
   # truncate cores to a common depth interval [0, max.depth]
-  #   suppress aqp::glom warnings about cores with depth &lt; max.depth
-  res &lt;- suppressWarnings(trunc(spc, 0, max.depth))  %&gt;% 
+  res &lt;- trunc(spc, 0, max.depth)  %&gt;% 
     
     # for the depth-weighted mean, calculate horizon thickness
     #   identical to arithmetic mean if depth interval is constant
-    aqp::mutate(layer_wt = bottom - top) %&gt;%
+    transform(layer_wt = bottom - top) %&gt;%
     
     # mutate_profile performs mutation by profile (site/core)
     mutate_profile(dwt_V = weighted.mean(V, layer_wt),
@@ -199,14 +197,14 @@ profile_id(pocmaj2) &lt;- paste(profile_id(pocmaj2), &quot;[0 - 2 m]&quot;)
 profile_id(pocmaj6) &lt;- paste(profile_id(pocmaj6), &quot;[0 - 6 m]&quot;)</code></pre>
 <p>The below code demonstrates effects of total sampling depth on aggregation of stratified layers to “point” or site-level values.</p>
 <pre class="r"><code># inspect result (a site-level field calculated from all layers)
-pocmaj2and6 &lt;- aqp::union(list(pocmaj2, pocmaj6))
+pocmaj2and6 &lt;- c(pocmaj2, pocmaj6)
 
 # combined plot
 plot(pocmaj2and6, color = &quot;V&quot;, name = &quot;hzID&quot;)</code></pre>
 <p><img src="/post/2020-08-16-exploring-tibble-lakes-aqp-tidyverse_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <pre class="r"><code># inspect
 site(pocmaj2and6)[,c(idname(pocmaj2and6), &quot;dwt_V&quot;, &quot;median_V&quot;, &quot;mean_V&quot;, &quot;sd_V&quot;)]</code></pre>
-<pre><code>## # A tibble: 4 x 5
+<pre><code>## # A tibble: 4 × 5
 ##   core              dwt_V median_V mean_V  sd_V
 ##   &lt;chr&gt;             &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
 ## 1 maj15-1 [0 - 2 m]  71.5     71.5   71.5  2.12
@@ -222,23 +220,20 @@ site(pocmaj2and6)[,c(idname(pocmaj2and6), &quot;dwt_V&quot;, &quot;median_V&quot
 <pre class="r"><code># assume variation in bottom depth amounts to a standard deviation of about 10% 1m core thickness
 # i.e. that normal curve centered at the boundary between 100cm layers has SD of 10cm
 horizons(pocmaj2and6)$layer_sd &lt;- 10</code></pre>
-<p>To simulate we use the <em>aqp</em> method <code>permute_profile</code>. We use <code>profileApply</code> to iterate over cores, and <code>aqp::union</code> to combine the <code>100</code> realizations we generate for each of the four input profiles.</p>
+<p>To simulate we use the <em>aqp</em> method <code>permute_profile</code>. We use <code>profileApply</code> to iterate over cores, and <code>aqp::combine</code> to combine the <code>100</code> realizations we generate for each of the four input profiles.</p>
 <pre class="r"><code># random number seed
 set.seed(1234)
 
-# iterate over cores, generate 100 realizations each, aqp::union result
-bigpocmaj &lt;- aqp::union(profileApply(pocmaj2and6, function(p) {
+# iterate over cores, generate 100 realizations each, combine result
+bigpocmaj &lt;- aqp::combine(profileApply(pocmaj2and6, function(p) {
                # use a horizon-level field to produce geometric realizations
-               pp &lt;- permute_profile(p, boundary.attr = &quot;layer_sd&quot;)
+               pp &lt;- perturb(p, boundary.attr = &quot;layer_sd&quot;)
                
                # naive simulation of varying V values
                #  - core-specific standard deviation rounded base10 logarithm 
                #  - value cannot be negative [snaps to zero]
-               pp$V &lt;- pmax(0, pp$V + 
-                              rnorm(nrow(pp), mean = 0, sd = 10^round(log10(pp$sd_V))))
+               pp$V &lt;- pmax(0, pp$V + rnorm(nrow(pp), mean = 0, sd = 10^round(log10(pp$sd_V))))
                
-               # create a unique profile ID
-               profile_id(pp) &lt;- paste0(unique(p$core), profile_id(pp))
                return(pp)
              }))</code></pre>
 <p>Note that this is a relatively naive way of simulating the property values, but also is perhaps reasonable considering the vertical granularity of observations in the Z dimension.</p>
@@ -281,11 +276,7 @@ ggplot(littlebig, aes(x = V, after_stat(density),
 <div id="grouped-profile-plot" class="section level2">
 <h2>Grouped Profile Plot</h2>
 <p>This is a <code>groupedProfilePlot()</code> showing the different realizations generated from each of the four “parent” core descriptions. They look pretty noisy as they are unaware of any sort of meaningful pattern of depth covariance.</p>
-<pre class="r"><code># default layer label is &quot;name&quot;
-horizons(bigpocmaj)$name &lt;- &quot;&quot;
-
-# plot
-groupedProfilePlot(bigpocmaj[sample(1:length(bigpocmaj), size = 30),], 
+<pre class="r"><code>groupedProfilePlot(bigpocmaj[sample(1:length(bigpocmaj), size = 30),], 
                    groups = &quot;core&quot;, color = &quot;V&quot;, print.id = FALSE)</code></pre>
 <p><img src="/post/2020-08-16-exploring-tibble-lakes-aqp-tidyverse_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 </div>
@@ -295,17 +286,17 @@ groupedProfilePlot(bigpocmaj[sample(1:length(bigpocmaj), size = 30),],
 rbind(tibble(Source = &quot;Raw&quot;,       Q = t(round(quantile(pocmaj_raw$V)))),
       tibble(Source = &quot;Median&quot;,    Q = t(round(quantile(pocmaj2and6$V)))),
       tibble(Source = &quot;Synthetic&quot;, Q = t(round(quantile(bigpocmaj$V)))))</code></pre>
-<pre><code>## # A tibble: 3 x 2
+<pre><code>## # A tibble: 3 × 2
 ##   Source    Q[,&quot;0%&quot;] [,&quot;25%&quot;] [,&quot;50%&quot;] [,&quot;75%&quot;] [,&quot;100%&quot;]
 ##   &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
 ## 1 Raw             29       62       73       82        95
 ## 2 Median          31       52       70       78        87
-## 3 Synthetic        4       48       69       77       113</code></pre>
+## 3 Synthetic        6       50       70       78       110</code></pre>
 <p>Note that the <code>median()</code>-based summary by layer “tamps” down the more extreme values from the raw data. However, the synthetic distribution captures the original range <em>and then some</em>. This is because we are “permuting” or “perturbing” Vanadium values using core-level variance parameters and assumptions of normality.</p>
-<p>A maximum value of 113 pXRF is obtained in the synthetic sample – which is nearly 30 pXRF greater than the highest median, and about 20 pXRF greater than the highest observed raw value. For estimation of extrema rather than central tendency above approaches would need to be adjusted, but this is fine for this demonstration. It looks reasonably convincing when you compare to the density plot – though there really is just very little input data in this demo.</p>
+<p>A maximum value of 110 pXRF is obtained in the synthetic sample – which is nearly 30 pXRF greater than the highest median, and about 20 pXRF greater than the highest observed raw value. For estimation of extrema rather than central tendency above approaches would need to be adjusted, but this is fine for this demonstration. It looks reasonably convincing when you compare to the density plot – though there really is just very little input data in this demo.</p>
 <pre class="r"><code># use aqp::slab to calculate quantiles of V for 10cm &quot;slabs&quot; grouped by core
 #  this is layer-level data result in a data.frame
-hbpp &lt;- slab(bigpocmaj, core ~ V, slab.structure = 10)
+hbpp &lt;- slab(bigpocmaj, .oldID ~ V, slab.structure = 10)
 hbpp &lt;- hbpp[complete.cases(hbpp),]
 
 # small jitter to prevent overplotting of medians
@@ -319,10 +310,11 @@ ggplot(hbpp, aes(x = V, y = top)) +
        scale_y_reverse() +
        labs(title = &quot;Synthetic `bigpocmaj` 10cm slab-wise median V [pXRF]\n w/ 0.05, 0.95 quantiles&quot;, 
             x = &quot;Vanadium (V), pXRF&quot;, y = &quot;Depth, cm&quot;, color = &quot;Legend&quot;) +
-       geom_path(data = hbpp, aes(x = p.q50, y = top, color = factor(core)), linetype = 2) +
-       geom_path(data = hbpp, aes(x = p.q5, y = top, color = factor(core)), linetype = 3) + 
-       geom_path(data = hbpp, aes(x = p.q95, y = top, color = factor(core)), linetype = 3) +
-       scale_color_manual(values = cbPalette) + theme_bw()</code></pre>
+       geom_path(data = hbpp, aes(x = p.q50, y = top, color = factor(.oldID)), linetype = 2) +
+       geom_path(data = hbpp, aes(x = p.q5, y = top, color = factor(.oldID)), linetype = 3) + 
+       geom_path(data = hbpp, aes(x = p.q95, y = top, color = factor(.oldID)), linetype = 3) + 
+       scale_color_manual(values = cbPalette) +
+       theme_bw()</code></pre>
 <p><img src="/post/2020-08-16-exploring-tibble-lakes-aqp-tidyverse_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <!--
 Here are two base **R** plots you can try on your own for comparison to _ggplot2_.
@@ -354,28 +346,30 @@ plts <- profileApply(bigpocmaj, function(p) {
 simulated.groups &lt;- summarize_core(bigpocmaj, 600) %&gt;% 
   
   # group by &quot;core&quot; (original profile ID)
-  aqp::group_by(core) %&gt;%
+  aqp::groupSPC(core) %&gt;%
   
   # summarize profile stats by original core group
-  aqp::summarize(mean_dwt_V = mean(dwt_V), 
-                 mean_median_V = mean(median_V), 
-                 mean_mean_V = mean(mean_V), 
-                 mean_sd_V = mean(sd_V),
-                 sd_dwt_V = sd(dwt_V), 
-                 sd_median_V = sd(median_V), 
-                 sd_mean_V = sd(mean_V), 
-                 sd_sd_V = sd(sd_V))</code></pre>
-<pre><code>## converting core to a factor</code></pre>
+  aqp::summarizeSPC(mean_dwt_V = mean(dwt_V), 
+                    mean_median_V = mean(median_V), 
+                    mean_mean_V = mean(mean_V), 
+                    mean_sd_V = mean(sd_V),
+                    sd_dwt_V = sd(dwt_V), 
+                    sd_median_V = sd(median_V), 
+                    sd_mean_V = sd(mean_V), 
+                    sd_sd_V = sd(sd_V))</code></pre>
+<pre><code>## converting core to factor</code></pre>
 <pre class="r"><code># inspect
 head(simulated.groups)</code></pre>
-<pre><code>## # A tibble: 4 x 9
-##   core  mean_dwt_V mean_median_V mean_mean_V mean_sd_V sd_dwt_V sd_median_V
-##   &lt;chr&gt;      &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;
-## 1 maj1…       71.7          71.5        71.5      2.23    0.760       0.731
-## 2 maj1…       68.5          68.6        68.6     11.7     4.53        4.83 
-## 3 poc1…       32.4          32.8        32.8      8.45    6.86        6.78 
-## 4 poc1…       65.5          75.5        66.0     27.2     3.83        5.58 
-## # … with 2 more variables: sd_mean_V &lt;dbl&gt;, sd_sd_V &lt;dbl&gt;</code></pre>
+<pre><code>## # A tibble: 6 × 9
+##   core       mean_dwt_V mean_median_V mean_mean_V mean_sd_V sd_dwt_V sd_median_V
+##   &lt;chr&gt;           &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;
+## 1 maj15-1 […       71.9          72.1        72.1      1.97       NA          NA
+## 2 maj15-1 […       72.0          71.9        71.9      1.76       NA          NA
+## 3 maj15-1 […       72.2          72.0        72.0      1.80       NA          NA
+## 4 maj15-1 […       72.6          73.0        73.0      2.64       NA          NA
+## 5 maj15-1 […       71.1          71.0        71.0      2.93       NA          NA
+## 6 maj15-1 […       71.6          71.5        71.5      2.70       NA          NA
+## # ℹ 2 more variables: sd_mean_V &lt;dbl&gt;, sd_sd_V &lt;dbl&gt;</code></pre>
 <p>So, we may not completely believe the values coming out of this naive simulation, but it shows the workflow for how you would summarize a larger amount of data.</p>
 <p>Also possibly gives some ideas on how to begin comparing observed data to synthetic data. The output generally reflects the pattern we saw from the individual cores – with a little more <em>fuzziness</em>.</p>
 </div>

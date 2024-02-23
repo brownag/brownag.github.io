@@ -6,258 +6,210 @@
     <description>Recent content in Categories on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R Spatial GDAL Terra Gpkg</title>
+      <link>/categories/r-spatial-gdal-terra-gpkg/</link>
+      <pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>/categories/r-spatial-gdal-terra-gpkg/</guid>
+      <description></description>
+    </item>
     <item>
       <title>GDAL</title>
       <link>/categories/gdal/</link>
       <pubDate>Thu, 23 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/categories/gdal/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Google Earth Engine</title>
       <link>/categories/google-earth-engine/</link>
       <pubDate>Thu, 23 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/categories/google-earth-engine/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
       <link>/categories/r/</link>
       <pubDate>Thu, 23 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/categories/r/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>terra</title>
+      <title>Terra</title>
       <link>/categories/terra/</link>
       <pubDate>Thu, 23 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/categories/terra/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>aqp</title>
+      <title>Aqp</title>
       <link>/categories/aqp/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/aqp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DataFrames</title>
       <link>/categories/dataframes/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/dataframes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Julia</title>
       <link>/categories/julia/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/julia/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SoilProfileCollection</title>
       <link>/categories/soilprofilecollection/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/soilprofilecollection/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>vctrs</title>
+      <title>Vctrs</title>
       <link>/categories/vctrs/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/vctrs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Cypher</title>
       <link>/categories/cypher/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/cypher/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Neo4j</title>
       <link>/categories/neo4j/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/neo4j/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NoSQL</title>
       <link>/categories/nosql/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/nosql/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>limnology</title>
+      <title>Limnology</title>
       <link>/categories/limnology/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/limnology/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mutate_profile</title>
+      <title>Mutate_profile</title>
       <link>/categories/mutate_profile/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/mutate_profile/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>permute_profile</title>
+      <title>Permute_profile</title>
       <link>/categories/permute_profile/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/permute_profile/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>tidyverse</title>
+      <title>Tidyverse</title>
       <link>/categories/tidyverse/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/tidyverse/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>flexdashboard</title>
+      <title>Flexdashboard</title>
       <link>/categories/flexdashboard/</link>
       <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/flexdashboard/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>shiny</title>
+      <title>Shiny</title>
       <link>/categories/shiny/</link>
       <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/shiny/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>blogdown</title>
+      <title>Blogdown</title>
       <link>/categories/blogdown/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/blogdown/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Drupal</title>
       <link>/categories/drupal/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/drupal/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>hugo</title>
+      <title>Hugo</title>
       <link>/categories/hugo/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/hugo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>TravisCI</title>
       <link>/categories/travisci/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/travisci/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Example</title>
       <link>/categories/example/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/example/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>cloud</title>
+      <title>Cloud</title>
       <link>/categories/cloud/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/cloud/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>nginx</title>
+      <title>Nginx</title>
       <link>/categories/nginx/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/nginx/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>plumber</title>
+      <title>Plumber</title>
       <link>/categories/plumber/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/plumber/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Henry Mount</title>
       <link>/categories/henry-mount/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/henry-mount/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>soilDB</title>
+      <title>SoilDB</title>
       <link>/categories/soildb/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>/categories/soildb/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

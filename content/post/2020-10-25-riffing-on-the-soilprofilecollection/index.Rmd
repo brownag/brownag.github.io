@@ -29,7 +29,9 @@ Use of nested record objects containing geometry fields and the ability to direc
 
 Here is a quick demonstration of incorporating _wk_ vectors for geometric and graphical operations. I use the _SoilProfileCollection_ `loafercreek` from the _soilDB_ package for source data. I demonstrate a couple simple vector operations and allude to how they can be used for interactive/dynamic profile plots.
 
-```{r}
+**NOTE: 2024/02/22 -- It appears the following code involving _wk_rcrd_ objects in the horizon slot of SoilProfileCollections no longer works with data.table internals that do not support vctrs-style columns :(**
+
+```{r, eval=FALSE}
 # get these off github
 # remotes::install_github(c('paleolimbot/wk',
 #                           'ncss-tech/aqp', 
@@ -158,7 +160,11 @@ Initially, I have translated the key vector operations required for maintaining 
 
 In the future, I will consider further diverging from the _SoilProfileCollection_ concept and topology checks -- possibly moving to an alternate representations of depth and geometry. One fun idea I would like to explore is integrating the Julia [Measurements](https://github.com/JuliaPhysics/Measurements.jl) package in all soil depth-based values by default. Then, _SoilProfiles_-specific functions would be designed around the paradigm of uncertainty and error-propagation from fundamental physical, geometric measurements to derived analyte values, evaluation criteria etc.
 
-Along with my first foray into Julia, here is my first time knitting Julia code + output in a R markdown document.
+Along with my first foray into Julia, here is my first time knitting Julia code + output in a R markdown document (requires {JuliaCall}).
+
+```{julia}
+import Pkg; Pkg.add("SoilProfiles")
+```
 
 ```{julia}
 using SoilProfiles

@@ -30,7 +30,7 @@ data("loafercreek")
 #  which affects their argillic horizon/PSCS depths
 foo <- mutate_profile(loafercreek, 
                       in_range = all(na.omit(clay > 20 & clay < 35)) )
-s <- filter(foo, in_range)
+s <- subset(foo, in_range)
 
 # make a plot
 par(mar=c(0,0,3,0))

@@ -7,6 +7,7 @@ slug: using-the-terra-r-package-to-view-download-and-analyze-google-earth-engine
 categories:
   - terra
   - R
+  - Spatial
   - GDAL
   - Google Earth Engine
 tags: 
@@ -30,7 +31,7 @@ The key "issue" for me was authenticating with the Earth Engine API... the docum
 To create a `SpatRaster` from an existing source path/URL with `terra` we call `rast(<character>)` with a Google Earth Engine asset as our source. To denote the Earth Engine asset we prefix the path with "EEDAI:", which explicitly indicates the Google Earth Engine Data API driver be used.
 
 ```r
-terra::rast("EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG")
+terra::rast("EEDAI:COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG")
 #> Error: [rast] cannot open file: EEDAI:projects/earthengine-public/assets/COPERNICUS/S2/20170430T190351_20170430T190351_T10SEG
 #> In addition: Warning message:
 #> Missing EEDA_BEARER, EEDA_BEARER_FILE or GOOGLE_APPLICATION_CREDENTIALS or EEDA_PRIVATE_KEY/EEDA_PRIVATE_KEY_FILE + EEDA_CLIENT_EMAIL config option (GDAL error 1) 

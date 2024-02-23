@@ -6,87 +6,77 @@
     <description>Recent content in Tags on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GeoPackage</title>
+      <link>/tags/geopackage/</link>
+      <pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>/tags/geopackage/</guid>
+      <description></description>
+    </item>
     <item>
       <title>API</title>
       <link>/tags/api/</link>
       <pubDate>Thu, 23 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>/tags/api/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>demonstrations</title>
+      <title>Demonstrations</title>
       <link>/tags/demonstrations/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/demonstrations/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>soil taxonomy</title>
+      <title>Soil Taxonomy</title>
       <link>/tags/soil-taxonomy/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/soil-taxonomy/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>correlation</title>
+      <title>Correlation</title>
       <link>/tags/correlation/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/correlation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DigitalOcean</title>
       <link>/tags/digitalocean/</link>
       <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/digitalocean/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>climate</title>
+      <title>Climate</title>
       <link>/tags/climate/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/climate/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>groundwater</title>
+      <title>Groundwater</title>
       <link>/tags/groundwater/</link>
       <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/groundwater/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>mollic epipedon</title>
+      <title>Mollic Epipedon</title>
       <link>/tags/mollic-epipedon/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>/tags/mollic-epipedon/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>loafercreek</title>
+      <title>Loafercreek</title>
       <link>/tags/loafercreek/</link>
       <pubDate>Tue, 25 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/tags/loafercreek/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

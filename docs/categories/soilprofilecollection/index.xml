@@ -6,26 +6,21 @@
     <description>Recent content in SoilProfileCollection on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/soilprofilecollection/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/soilprofilecollection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Riffing on the SoilProfileCollection</title>
       <link>/post/2020/10/25/riffing-on-the-soilprofilecollection/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/10/25/riffing-on-the-soilprofilecollection/</guid>
-      <description>Recently I developed two different riffs on the motif of the aqp SoilProfileCollection… Soil profiles are essentially cross-sections for a point, line or area on the land surface where distinct “layers” are defined by a top and bottom depth measurement. There is generally a many:one relationship between layers observed within a soil profile and the site-level information that identifies or summarizes that profile.
-soilvctrs soilvctrs is an experimental R package to abstract geometric operations on stratified environmental data such as soil profile descriptions.</description>
+      <description>Recently I developed two different riffs on the motif of the aqp SoilProfileCollection… Soil profiles are essentially cross-sections for a point, line or area on the land surface where distinct “layers” are defined by a top and bottom depth measurement. There is generally a many:one relationship between layers observed within a soil profile and the site-level information that identifies or summarizes that profile.&#xA;soilvctrs soilvctrs is an experimental R package to abstract geometric operations on stratified environmental data such as soil profile descriptions.</description>
     </item>
-    
     <item>
       <title>Exploring the tidyverse, lakes, synthetic data, and tibble-SoilProfileCollections</title>
       <link>/post/2020/08/16/exploring-tibble-lakes-aqp-tidyverse/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/08/16/exploring-tibble-lakes-aqp-tidyverse/</guid>
-      <description>In this brief tutorial, we will be using the aqp and tidyverse R packages for wrangling stratified environmental data from lake cores.
-The sample lake core data from Dewey Dunnington’s tidyverse core-data-wrangling tutorial are pretty “typical” of raw, stratified environmental data that you might have kicking around on your hard drive. It also has a lot of information content despite very small (subset) size – which you will see in his tutorial and in what follows.</description>
+      <description>In this brief tutorial, we will be using the aqp and tidyverse R packages for wrangling stratified environmental data from lake cores.&#xA;The sample lake core data from Dewey Dunnington’s tidyverse core-data-wrangling tutorial are pretty “typical” of raw, stratified environmental data that you might have kicking around on your hard drive. It also has a lot of information content despite very small (subset) size – which you will see in his tutorial and in what follows.</description>
     </item>
-    
   </channel>
 </rss>

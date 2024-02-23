@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Spatial GDAL Terra Gpkg on humus.rocks - soil is life on the rocks</title>
+    <link>/categories/r-spatial-gdal-terra-gpkg/</link>
+    <description>Recent content in R Spatial GDAL Terra Gpkg on humus.rocks - soil is life on the rocks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 19 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/r-spatial-gdal-terra-gpkg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gpkg - Utilities for the Open Geospatial Consortium (OGC) &#39;GeoPackage&#39; Format in R</title>
+      <link>/post/2024/02/19/gpkg-utilities-for-the-open-geospatial-consortium-ogc-geopackage-format-in-r/</link>
+      <pubDate>Mon, 19 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>/post/2024/02/19/gpkg-utilities-for-the-open-geospatial-consortium-ogc-geopackage-format-in-r/</guid>
+      <description>gpkg - Utilities for the OGC ‘GeoPackage’ Format High-level wrapper functions to build Open Geospatial Consortium (OGC) ‘GeoPackage’ files. GDAL utilities for read and write of spatial data (vector and gridded) are provided via the {terra} package. Additional ‘GeoPackage’ and ‘SQLite’ specific functions manipulate attributes and tabular data via the {RSQLite} package.&#xA;Installation Install the latest release from CRAN:&#xA;install.packages(&amp;quot;gpkg&amp;quot;) The development package can be installed from GitHub with {remotes}</description>
+    </item>
+  </channel>
+</rss>

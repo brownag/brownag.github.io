@@ -1,86 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>aqp on humus.rocks - soil is life on the rocks</title>
+    <title>Aqp on humus.rocks - soil is life on the rocks</title>
     <link>/categories/aqp/</link>
-    <description>Recent content in aqp on humus.rocks - soil is life on the rocks</description>
+    <description>Recent content in Aqp on humus.rocks - soil is life on the rocks</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/aqp/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/aqp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Riffing on the SoilProfileCollection</title>
       <link>/post/2020/10/25/riffing-on-the-soilprofilecollection/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/10/25/riffing-on-the-soilprofilecollection/</guid>
-      <description>Recently I developed two different riffs on the motif of the aqp SoilProfileCollection… Soil profiles are essentially cross-sections for a point, line or area on the land surface where distinct “layers” are defined by a top and bottom depth measurement. There is generally a many:one relationship between layers observed within a soil profile and the site-level information that identifies or summarizes that profile.
-soilvctrs soilvctrs is an experimental R package to abstract geometric operations on stratified environmental data such as soil profile descriptions.</description>
+      <description>Recently I developed two different riffs on the motif of the aqp SoilProfileCollection… Soil profiles are essentially cross-sections for a point, line or area on the land surface where distinct “layers” are defined by a top and bottom depth measurement. There is generally a many:one relationship between layers observed within a soil profile and the site-level information that identifies or summarizes that profile.&#xA;soilvctrs soilvctrs is an experimental R package to abstract geometric operations on stratified environmental data such as soil profile descriptions.</description>
     </item>
-    
     <item>
       <title>Exploring the tidyverse, lakes, synthetic data, and tibble-SoilProfileCollections</title>
       <link>/post/2020/08/16/exploring-tibble-lakes-aqp-tidyverse/</link>
       <pubDate>Sun, 16 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/08/16/exploring-tibble-lakes-aqp-tidyverse/</guid>
-      <description>In this brief tutorial, we will be using the aqp and tidyverse R packages for wrangling stratified environmental data from lake cores.
-The sample lake core data from Dewey Dunnington’s tidyverse core-data-wrangling tutorial are pretty “typical” of raw, stratified environmental data that you might have kicking around on your hard drive. It also has a lot of information content despite very small (subset) size – which you will see in his tutorial and in what follows.</description>
+      <description>In this brief tutorial, we will be using the aqp and tidyverse R packages for wrangling stratified environmental data from lake cores.&#xA;The sample lake core data from Dewey Dunnington’s tidyverse core-data-wrangling tutorial are pretty “typical” of raw, stratified environmental data that you might have kicking around on your hard drive. It also has a lot of information content despite very small (subset) size – which you will see in his tutorial and in what follows.</description>
     </item>
-    
     <item>
       <title>Shiny Pedon Summary: Loafercreek &amp; Gopheridge demo</title>
       <link>/post/2020/08/03/shiny-pedon-summary-now-on-shinyapps-io-w-loafercreek-gopheridge-demo-data/</link>
       <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/08/03/shiny-pedon-summary-now-on-shinyapps-io-w-loafercreek-gopheridge-demo-data/</guid>
-      <description>This is the Shiny &amp;ldquo;flexdashboard&amp;rdquo; version of the &amp;ldquo;pedon summary report&amp;rdquo; originally developed by Dylan Beaudette. I have developed and refined this dashboard periodically over several years. I developed it initially as a very simple interface to semi-automate viewing profile sketches and report generation based on mapunit, series name and taxon kind.
-https://brownag.shinyapps.io/ShinyPedonSummary/
-This tool has been part of the ncss-tech soilReports package for a while now, but recent revisions improve efficiency and produce static output matching the original report Dylan developed.</description>
+      <description>This is the Shiny &amp;ldquo;flexdashboard&amp;rdquo; version of the &amp;ldquo;pedon summary report&amp;rdquo; originally developed by Dylan Beaudette. I have developed and refined this dashboard periodically over several years. I developed it initially as a very simple interface to semi-automate viewing profile sketches and report generation based on mapunit, series name and taxon kind.&#xA;https://brownag.shinyapps.io/ShinyPedonSummary/&#xA;This tool has been part of the ncss-tech soilReports package for a while now, but recent revisions improve efficiency and produce static output matching the original report Dylan developed.</description>
     </item>
-    
     <item>
       <title>Estimations of Soil Depth with aqp</title>
       <link>/post/2020/07/13/estimations-with-algorithms-for-quantitative-pedology/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/07/13/estimations-with-algorithms-for-quantitative-pedology/</guid>
-      <description>Estimation of soil depth in aqp R package Estimation functions for soils try to calculate unknown properties based on existing observations and known relationships. The term pedotransfer function was coined by Johan Bouma as “translating data we have into what we need.” Soil surveys, and especially the primary descriptions collected by field soil scientists, offer many opportunities for leveraging this type of information.
-In Algorithms for Quantitative Pedology aqp, the heuristics are defined in terms of R code.</description>
+      <description>Estimation of soil depth in aqp R package Estimation functions for soils try to calculate unknown properties based on existing observations and known relationships. The term pedotransfer function was coined by Johan Bouma as “translating data we have into what we need.” Soil surveys, and especially the primary descriptions collected by field soil scientists, offer many opportunities for leveraging this type of information.&#xA;In Algorithms for Quantitative Pedology aqp, the heuristics are defined in terms of R code.</description>
     </item>
-    
     <item>
       <title>Mollic epipedon thickness requirement</title>
       <link>/post/2020/04/30/mollic-epipedon-thickness-requirement/</link>
       <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/04/30/mollic-epipedon-thickness-requirement/</guid>
-      <description>[This functionality has been live in aqp since version 1.21+]
-Here is a demonstration of some new functionality I am working on for evaluating taxonomic criteria with aqp.
-mollic.thickness.requirement calculates the minimum thickness of the materials meeting other requirements for a mollic epipedon, per criterion 6 in U.S. Soil Taxonomy (12th edition). I have used it for QC of pedon data, and also to assess questions about how frequently e.</description>
+      <description>[This functionality has been live in aqp since version 1.21+]&#xA;Here is a demonstration of some new functionality I am working on for evaluating taxonomic criteria with aqp.&#xA;mollic.thickness.requirement calculates the minimum thickness of the materials meeting other requirements for a mollic epipedon, per criterion 6 in U.S. Soil Taxonomy (12th edition). I have used it for QC of pedon data, and also to assess questions about how frequently e.</description>
     </item>
-    
     <item>
       <title>aqp 1.19 release and demos</title>
       <link>/post/2020/01/27/aqp-1-19-release-and-demos/</link>
       <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>/post/2020/01/27/aqp-1-19-release-and-demos/</guid>
-      <description>CRAN release: aqp (Algorithms for Quantitative Pedology) 1.19 Recent Changes CRAN release aqp 1.19 (2020-01-22) new functions: hzDesgn(), get horizon designations from a SPC new functions: hzdesgnname()/hzdesgnname()&amp;lt;- and hztexclname()/hztexclname()&amp;lt;- get/set column containing horizon designations and texture classes better error/logic handling for glom() Demonstrations aqp::glom() demo Here is a demonstration of checking cambic horizon texture criteria with glom() in SSURGO components from Yosemite National Park: - http://ncss-tech.github.io/AQP/demos/glom/glacierpoint.html
-aqp::estimatePSCS() demo Here is a demonstration of validating particle size control sections (populated in NASIS Taxonomic History Table) against calculated new algorithm estimatePSCS().</description>
+      <description>CRAN release: aqp (Algorithms for Quantitative Pedology) 1.19 Recent Changes CRAN release aqp 1.19 (2020-01-22) new functions: hzDesgn(), get horizon designations from a SPC new functions: hzdesgnname()/hzdesgnname()&amp;lt;- and hztexclname()/hztexclname()&amp;lt;- get/set column containing horizon designations and texture classes better error/logic handling for glom() Demonstrations aqp::glom() demo Here is a demonstration of checking cambic horizon texture criteria with glom() in SSURGO components from Yosemite National Park: - http://ncss-tech.github.io/AQP/demos/glom/glacierpoint.html&#xA;aqp::estimatePSCS() demo Here is a demonstration of validating particle size control sections (populated in NASIS Taxonomic History Table) against calculated new algorithm estimatePSCS().</description>
     </item>
-    
     <item>
       <title>loafercreek - aqp profileApply() tutorial</title>
       <link>/post/2018/12/25/loafercreek-aqp-profileapply-tutorial/</link>
       <pubDate>Tue, 25 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>/post/2018/12/25/loafercreek-aqp-profileapply-tutorial/</guid>
-      <description>This is a tutorial (worked examples and exercises) demonstrating use of the profileApply() function from the R package aqp.
-http://ncss-tech.github.io/AQP/demos/profileApply/loafercreek.html
-It loads a dataset, called loafercreek from the R package soilDB.
-The analysis is supported by the package sharpshootR. These packages are in large part developed by Dylan Beaudette, but there now are many contributors within NCSS.
-Loafercreek the dataset is a collection of mostly moderately deep Ultic Haploxeralfs on metavolcanic rock from the CA630 soil survey area (parts of Calaveras and Tuolumne Counties.</description>
+      <description>This is a tutorial (worked examples and exercises) demonstrating use of the profileApply() function from the R package aqp.&#xA;http://ncss-tech.github.io/AQP/demos/profileApply/loafercreek.html&#xA;It loads a dataset, called loafercreek from the R package soilDB.&#xA;The analysis is supported by the package sharpshootR. These packages are in large part developed by Dylan Beaudette, but there now are many contributors within NCSS.&#xA;Loafercreek the dataset is a collection of mostly moderately deep Ultic Haploxeralfs on metavolcanic rock from the CA630 soil survey area (parts of Calaveras and Tuolumne Counties.</description>
     </item>
-    
   </channel>
 </rss>
