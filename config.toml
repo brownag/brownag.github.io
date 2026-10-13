@@ -1,5 +1,5 @@
 baseurl = "/"
-publishDir = "docs"
+publishDir = "public"
 languageCode = "en-us"
 title = "humus.rocks - soil is life on the rocks"
 theme = "hugo-xmin-brownag"

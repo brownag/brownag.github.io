@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+docs/
+public/
+planning/
+.development/
+.hugo_build.lock
